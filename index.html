@@ -66,6 +66,10 @@
             padding-top: 16px;
         }
 
+        .buy-food:hover {
+            opacity: 0.8;
+        }
+
         .buy-food {
             margin-top: 16px;
             padding: 6px 25px;
@@ -89,7 +93,7 @@
             <div class="food-body">
                 <h3 class="food-heading">Phở</h3>
                 <p class="food-desc">Hà Nội</p>
-                <a href="" class="buy-food">Buy</a>
+                <a href="" class="buy-food js-text">Buy</a>
             </div>
         </div>
         <div class="food-item">
@@ -97,7 +101,7 @@
             <div class="food-body">
                 <h3 class="food-heading">Bánh Mì</h3>
                 <p class="food-desc">Sài Gòn</p>
-                <a href="" class="buy-food">Buy</a>
+                <a href="" class="buy-food js-text">Buy</a>
 
             </div>
         </div>
@@ -106,14 +110,28 @@
             <div class="food-body">
                 <h3 class="food-heading">Bún Bò</h3>
                 <p class="food-desc">Hà Nội</p>
-                <a href="" class="buy-food">Buy</a>
+                <a href="" class="buy-food js-text">Buy</a>
 
             </div>
         </div>
     <div class="clear"></div>
 
     </div>
+    
         
 </div>
 </body>
+
+<script>
+    const buyBtns = document.querySelectorAll('.js-text')
+function OpenText () {
+    alert("Không mua được đâu bấm làm gì !")
+    alert("Tinh làm form cho xịn mà lười :>>")
+}
+
+    for(const buyBtn of buyBtns) {
+       buyBtn.addEventListener('click', OpenText)
+    }
+
+</script>
 </html>
