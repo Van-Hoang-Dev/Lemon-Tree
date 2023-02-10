@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VietNam Food</title>
+    <link rel="stylesheet" href="./access/styles.css">
+    <link rel="stylesheet" href="./">
+</head>
+<body>
+    <div class="header">
+        
+    </div>
+    <div class="food-list">
+        <h2 class="text-heading">Favorite VietNam Food</h2>
+        <div class="food-item">
+            <img src="./access/images/pho-ha-noi.jpg" alt="" class="food-image">
+            <div class="food-body">
+                <h3 class="food-heading">Phở</h3>
+                <p class="food-desc">Hà Nội</p>
+                <button class="buy-food js-buy-food">Buy</button>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./access/images/banh-mi.jpg" alt="" class="food-image">
+            <div class="food-body">
+                <h3 class="food-heading">Bánh Mì</h3>
+                <p class="food-desc">Sài Gòn</p>
+                <button class="buy-food js-buy-food">Buy</button>
+
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="./access/images/bun-bo-hue.jpg" alt="" class="food-image">
+            <div class="food-body">
+                <h3 class="food-heading">Bún Bò</h3>
+                <p class="food-desc">Hà Nội</p>
+                <button class="buy-food js-buy-food">Buy</button>
+
+            </div>
+        </div>
+            <div class="clear"></div>
+        <!-- List 2 -->
+        </div>
+        <div class="food-list">
+            <h2 class="text-heading">Favorite TayNinh Food</h2>
+            <div class="food-item">
+                <img src="https://i.ytimg.com/vi/fOZXbbY9rfg/maxresdefault.jpg" alt="" class="food-image">
+                <div class="food-body">
+                    <h3 class="food-heading">Hủ Tiếu</h3>
+                    <p class="food-desc">Tây Ninh</p>
+                    <button class="buy-food js-buy-food">Buy</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="https://i.ytimg.com/vi/VuZoI4WRW9Q/maxresdefault.jpg" alt="" class="food-image">
+                <div class="food-body">
+                    <h3 class="food-heading">Cơm Sườn</h3>
+                    <p class="food-desc">Tây Ninh</p>
+                    <button class="buy-food js-buy-food">Buy</button>
+    
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="https://i.ytimg.com/vi/h8Lf7Tj9_ts/maxresdefault.jpg" alt="" class="food-image">
+                <div class="food-body">
+                    <h3 class="food-heading">Xôi Mặn</h3>
+                    <p class="food-desc">Tây Ninh</p>
+                    <button class="buy-food js-buy-food">Buy</button>
+    
+                </div>
+            </div>
+                <div class="clear"></div>
+
+         <!-- modal -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+
+            <div class="modal-close js-close-btn"><i class="ti-close"></i></div>
+            
+            <div class="modal-header">
+                
+                <h2 class="text-header">Buy now<i class="icon-modal-header ti-truck">____</i></h2>
+
+            </div>
+
+            <form class="modal-body">
+
+                <label for="model-address" class="model-lable">Địa Chỉ.</label>
+                <input type="text" id="model-address"class="modal-input" placeholder="Địa chỉ" required>
+
+                <label for="modal-quantity" class="model-lable">Số Lượng.</label>
+                <input type="number" id="modal-quantity"class="modal-input" min="1" max="10" required>
+
+                <button class="modal-btn">Pay</button>
+            </form>
+
+            <div class="modal-footer">
+                <p class="text-footer">Need <a href="#">help!</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    
+        
+</div>
+</body>
+
+<script>
+    const buyBtns = document.querySelectorAll('.js-buy-food')
+    const modal = document.querySelector('.js-modal')
+    const closeBtn = document.querySelector('.js-close-btn')
+    const modalContainer = document.querySelector('.js-modal-container')
+
+    function OpenText () {
+        modal.classList.add('open')
+    }
+
+    function CloseText () {
+        modal.classList.remove('open')
+    }
+
+    for(const buyBtn of buyBtns) {
+       buyBtn.addEventListener('click', OpenText)
+    }
+
+    closeBtn.addEventListener('click', CloseText )
+    modal.addEventListener('click', CloseText)
+    modalContainer.addEventListener('click', function(event){
+        event.stopPropagation()
+    })
+
+</script>
+</html>

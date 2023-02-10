@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+   background-color: #000;
+   position: relative;
+}
+
+.text-heading {
+   padding-bottom: 40px;
+    color:#fff;
+    text-align: center;
+}
+
+.food-list {
+    width: 800px;
+    padding: 64px 16px;
+    margin: 0 auto;
+}
+
+.food-item {
+    float: left;
+    width: calc(100% / 3);
+    padding: 0 8px;
+    text-align: center;
+}
+
+
+.food-image {
+    width: 100%;
+}
+
+.food-image:hover {
+    opacity: 0.5;
+}
+
+.food-body {
+    background-color: #fff;
+    padding: 16px;
+}
+
+.food-heading {
+   font-size: 15px;
+}
+
+.food-desc {
+   font-size: 15px;
+    padding-top: 16px;
+}
+
+.buy-food:hover {
+    opacity: 0.8;
+}
+
+.buy-food {
+    margin-top: 16px;
+    padding: 6px 25px;
+    display: inline-block;
+    background: #f33446;
+    color: #fff;
+    text-decoration: none;
+    border:1px solid #fff;
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+    display:none;
+
+}
+
+.modal.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    background-color:#fff;
+    width:800px;
+    min-height:200px;
+    position:relative;
+    max-width: calc(100% - 32px);
+    animation: modal-animation ease 0.4s;
+    
+}
+
+.modal-close {
+    position: absolute;
+    right:0;
+    color:#fff;
+    padding: 16px
+
+}
+
+.modal-header {
+    background-color:#009688;
+    color:#fff;
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+
+}
+
+.icon-modal-header {
+    padding-left: 20px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.model-lable {
+    display:block;
+    padding-bottom: 10px;
+
+
+}
+
+.modal-input {
+    font-size:15px;
+    width:100%;
+    padding: 5px 10px;
+    margin-bottom:24px;
+}
+
+.modal-btn:hover {
+    opacity: 0.8;
+}
+
+.modal-btn {
+    width: 100%;
+    /* margin: 0 20px; */
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color:#009688;
+    height: 40px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.modal-footer {
+    text-align: right;
+    padding: 16px;
+}
+
+.text-footer a {
+    color: #2196F3;
+}
+
+@keyframes modal-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0);
+    }
+    
+}
+
